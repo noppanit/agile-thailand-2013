@@ -1,1 +1,1 @@
-cfn-create-stack $1 --region eu-west-1 --template-file template/EC2_Instance_With_Block_Device_Mapping.template --parameters \"InstanceType=t1.micro\;KeyName=mykey\;SSHFrom=10.149.0.64/32\;\"
+cfn-create-stack $1 --region eu-west-1 --template-file template/EC2_Instance_With_Block_Device_Mapping.template --parameters \"KeyName=mykey\;SSHFrom=0.0.0.0/0\"

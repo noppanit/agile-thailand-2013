@@ -29,3 +29,7 @@ else
 fi
 
 export PATH=$PATH:/$AWS_CLOUDFORMATION_HOME/bin
+
+# this one for cfn scripts
+echo set EC2_REGION to eu-west-1
+export EC2_REGION=eu-west-1

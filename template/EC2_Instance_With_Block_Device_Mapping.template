@@ -77,28 +77,7 @@
                                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "InstanceType" }, "Arch" ] } ] },
         "KeyName" : { "Ref" : "KeyName" },
         "InstanceType" : { "Ref" : "InstanceType" },
-        "SecurityGroups" : [{ "Ref" : "Ec2SecurityGroup" }],
-        "BlockDeviceMappings" : [
-          {
-            "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "50" } 
-          },{
-            "DeviceName" : "/dev/sdm",
-            "Ebs" : { "VolumeSize" : "100" }
-          }
-        ]
-      }
-    },
-
-    "Ec2SecurityGroup" : {
-      "Type" : "AWS::EC2::SecurityGroup",
-      "Properties" : {
-        "GroupDescription" : "HTTP and SSH access",
-        "SecurityGroupIngress" : [ {
-          "IpProtocol" : "tcp", 
-          "FromPort" : "22", "ToPort" : "22", 
-          "CidrIp" : { "Ref" : "SSHFrom" }
-        } ]
+        "SecurityGroups" : ["sg-0a4cc57d"]
       }
     }
   },
